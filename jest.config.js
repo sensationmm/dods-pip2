@@ -1,5 +1,4 @@
 module.exports = {
-  collectCoverageFrom: ['**/*.{ts,tsx}', '!**/node_modules/**', '!**/.storybook/**', '!**/tests/**', '!**/coverage/**', '!jest.config.js'],
   coverageThreshold: {
     global: {
       branches: 100,
@@ -23,4 +22,5 @@ module.exports = {
     '.(ts|tsx)': 'babel-jest',
   },
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
+  collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/_app.tsx', '!coverage', '!src/globals/**/*.{ts,tsx}', '!src/pages/api/hello.ts'],
 };
